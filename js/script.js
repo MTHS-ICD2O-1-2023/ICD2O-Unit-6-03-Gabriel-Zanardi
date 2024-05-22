@@ -4,30 +4,15 @@
 // Created on: May 2024
 // This file contains the JS functions for index.html
 
-const getImage = async (URLAddress) => {
-  try {
-    const result = await fetch(URLAddress)
-    const jsonData = await result.json()
-    console.log(jsonData)
-    document.getElementById("api-image").innerHTML =
-      '<img src="' +
-      jsonData.url +
-      '" alt="API image" class="center" ' +
-      '>'
-    if (jsonData.artist_url != "none") {
-      document.getElementById("image-artist").innerHTML =
-        "<p>Artist: " +
-        '<a href="' +
-        jsonData.artist_url +
-        '">' +
-        jsonData.artist +
-        "</a>"
-    } else {
-      document.getElementById("image-artist").innerHTML = "<p>Artist: unknown</p>"
-    }
-  } catch (err) {
-    console.log(err)
-  }
-}
+"use strict"
 
-getImage("https://api.catboys.com/img")
+function myButtonClicked() {
+
+  const getImage = async("https://api.openweathermap.org/data/2.5/weather?lat=45.4211435&lon=-75.6900574&appid=fe1d80e1e103cff8c6afd190cad23fa5") => {
+    try {
+      const result = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=45.4211435&lon=-75.6900574&appid=fe1d80e1e103cff8c6afd190cad23fa5")
+      const jsonData = await result.json()
+      console.log(jsonData)
+    }
+
+}
