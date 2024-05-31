@@ -14,8 +14,9 @@
       const tempOttawa = jsonData.main.temp
       console.log(tempOttawa)
       // convert to C
+      let tempOttawaCelsius = tempOttawa - 275.15
       // then show
-      document.getElementById("final-answer").innerHTML = "The temperature in Ottawa is " + tempOttawa
+      document.getElementById("final-answer").innerHTML = "The temperature in Ottawa is " + tempOttawaCelsius.toFixed(2) + "°C"
     } catch (error) {
       console.error(error)
     }
